@@ -7,6 +7,7 @@
   },
   "scripts": {
     "perf-n3": "perf/n3.js",
+    "perf-rdflib": "perf/rdflib.js",
     "spec-n3": "npm run spec-n3-turtle && npm run spec-n3-ntriples && npm run spec-n3-nquads && npm run spec-n3-trig",
     "spec-n3-ntriples": "rdf-test-suite spec/n3.js http://w3c.github.io/rdf-tests/ntriples/manifest.ttl -i '{ \"format\": \"n-triples\" }' -c .rdf-test-suite-cache/",
     "spec-n3-nquads": "  rdf-test-suite spec/n3.js http://w3c.github.io/rdf-tests/nquads/manifest.ttl   -i '{ \"format\": \"n-quads\" }'   -c .rdf-test-suite-cache/",
