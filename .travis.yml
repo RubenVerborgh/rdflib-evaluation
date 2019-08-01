@@ -2,10 +2,7 @@ language: node_js
 node_js:
  - "12"
 script:
-  - npm run spec-turtle
-  - npm run spec-ntriples
-  - npm run spec-nquads
-  - npm run spec-trig
+  - npm run spec-n3
 cache:
   - npm
   - directories:

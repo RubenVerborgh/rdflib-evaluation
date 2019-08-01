@@ -4,11 +4,12 @@
     "rdf-test-suite": "^1.2.0"
   },
   "scripts": {
-    "spec": "npm run spec-turtle && npm run spec-ntriples && npm run spec-nquads && npm run spec-trig",
-    "spec-ntriples": "rdf-test-suite spec/parser.js http://w3c.github.io/rdf-tests/ntriples/manifest.ttl -i '{ \"format\": \"n-triples\" }' -c .rdf-test-suite-cache/",
-    "spec-nquads": "rdf-test-suite spec/parser.js http://w3c.github.io/rdf-tests/nquads/manifest.ttl -i '{ \"format\": \"n-quads\" }' -c .rdf-test-suite-cache/",
-    "spec-turtle": "rdf-test-suite spec/parser.js http://w3c.github.io/rdf-tests/turtle/manifest.ttl -i '{ \"format\": \"turtle\" }' -c .rdf-test-suite-cache/",
-    "spec-trig": "rdf-test-suite spec/parser.js http://w3c.github.io/rdf-tests/trig/manifest.ttl -i '{ \"format\": \"trig\" }' -c .rdf-test-suite-cache/",
+    "perf-n3": "perf/n3.js",
+    "spec-n3": "npm run spec-n3-turtle && npm run spec-n3-ntriples && npm run spec-n3-nquads && npm run spec-n3-trig",
+    "spec-n3-ntriples": "rdf-test-suite spec/n3.js http://w3c.github.io/rdf-tests/ntriples/manifest.ttl -i '{ \"format\": \"n-triples\" }' -c .rdf-test-suite-cache/",
+    "spec-n3-nquads": "  rdf-test-suite spec/n3.js http://w3c.github.io/rdf-tests/nquads/manifest.ttl   -i '{ \"format\": \"n-quads\" }'   -c .rdf-test-suite-cache/",
+    "spec-n3-turtle": "  rdf-test-suite spec/n3.js http://w3c.github.io/rdf-tests/turtle/manifest.ttl   -i '{ \"format\": \"turtle\" }'    -c .rdf-test-suite-cache/",
+    "spec-n3-trig": "    rdf-test-suite spec/n3.js http://w3c.github.io/rdf-tests/trig/manifest.ttl     -i '{ \"format\": \"trig\" }'      -c .rdf-test-suite-cache/",
     "spec-clean": "rm -r .rdf-test-suite-cache/"
   }
 }
