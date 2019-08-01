@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "@rdfjs/data-model": "^1.1.2",
     "n3": "^1.1.1",
-    "rdf-test-suite": "^1.2.0"
+    "rdf-test-suite": "^1.2.0",
+    "rdflib": "^0.20.3"
   },
   "scripts": {
     "perf-n3": "perf/n3.js",
@@ -10,6 +12,11 @@
     "spec-n3-nquads": "  rdf-test-suite spec/n3.js http://w3c.github.io/rdf-tests/nquads/manifest.ttl   -i '{ \"format\": \"n-quads\" }'   -c .rdf-test-suite-cache/",
     "spec-n3-turtle": "  rdf-test-suite spec/n3.js http://w3c.github.io/rdf-tests/turtle/manifest.ttl   -i '{ \"format\": \"turtle\" }'    -c .rdf-test-suite-cache/",
     "spec-n3-trig": "    rdf-test-suite spec/n3.js http://w3c.github.io/rdf-tests/trig/manifest.ttl     -i '{ \"format\": \"trig\" }'      -c .rdf-test-suite-cache/",
+    "spec-rdflib": "npm run spec-rdflib-turtle && npm run spec-rdflib-ntriples && npm run spec-rdflib-nquads && npm run spec-rdflib-trig",
+    "spec-rdflib-ntriples": "rdf-test-suite spec/rdflib.js http://w3c.github.io/rdf-tests/ntriples/manifest.ttl -i '{ \"format\": \"text/turtle\" }' -c .rdf-test-suite-cache/",
+    "spec-rdflib-nquads": "  rdf-test-suite spec/rdflib.js http://w3c.github.io/rdf-tests/nquads/manifest.ttl   -i '{ \"format\": \"text/turtle\" }' -c .rdf-test-suite-cache/",
+    "spec-rdflib-turtle": "  rdf-test-suite spec/rdflib.js http://w3c.github.io/rdf-tests/turtle/manifest.ttl   -i '{ \"format\": \"text/turtle\" }' -c .rdf-test-suite-cache/",
+    "spec-rdflib-trig": "    rdf-test-suite spec/rdflib.js http://w3c.github.io/rdf-tests/trig/manifest.ttl     -i '{ \"format\": \"text/turtle\" }' -c .rdf-test-suite-cache/",
     "spec-clean": "rm -r .rdf-test-suite-cache/"
   }
 }

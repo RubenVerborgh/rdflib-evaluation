@@ -2,7 +2,8 @@ language: node_js
 node_js:
  - "12"
 script:
-  - npm run spec-n3
+  - npm run spec-rdflib-turtle
+  - npm run spec-rdflib-ntriples
 cache:
   - npm
   - directories:
